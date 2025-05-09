@@ -1,0 +1,121 @@
+.container{
+    display: grid;
+    border-radius:10px ;
+
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "card1 card1 card2 card5 "
+    "card3 card4 card4 card5"
+    ;
+}
+header{
+    display: flex;
+    flex-direction: row;   
+
+}
+div{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    
+}
+
+.card1 header div {
+    position: relative; 
+}
+div >p{
+    gap: 0;
+    padding-top: 0;
+}
+.h1{
+    font-size: 13px;
+    
+}
+img{
+    border-radius: 60%;
+    width: 50px;
+    height: 100px;
+    padding-top: 20px;
+    border:4px solid  hsl(263, 55%, 52%);
+}
+
+.p1{
+    font-size: 13px;
+
+}
+
+section{
+    padding: 30px;
+    box-shadow:  0 4px 12px rgba(0, 0, 0, 0.1);
+    
+}
+.card1{
+    color:hsl(0, 0%, 100%) ;
+    grid-area: card1;
+    background-color:  hsl(263, 55%, 52%);
+}
+.card2{
+    color: hsl(0, 0%, 100%) ;
+    grid-area: card2;
+    background-color:  hsl(217, 19%, 35%);
+}
+.card3{
+    color: hsl(224, 10%, 45%);
+    grid-area: card3;
+    background-color:  hsl(0, 0%, 100%);
+}
+.card4{
+    color:hsl(0, 0%, 100%) ;
+    grid-area: card4;
+    background-color:  hsl(219, 29%, 14%);
+}
+.card5{
+    color: hsl(224, 10%, 45%);
+    grid-area: card5;
+    background-color: hsl(0, 0%, 100%);
+}
+@media (max-width: 375px){
+    body {
+        font-size: 13px;
+    }
+    .container {
+        grid-template-columns: 1fr; 
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5";
+        gap: 10px; 
+    }
+
+    .card1, .card2, .card3, .card4, .card5 {
+        font-size: 12px; 
+        padding: 10px; 
+    }
+
+    img {
+        width: 40px; 
+        height: 60px;
+    }
+}
+@media (max-width: 1440px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr); 
+        grid-template-areas:
+            "card1 card1 card2 card5"
+            "card3 card4 card4 card5";
+        gap: 20px; 
+    }
+
+    .card1, .card2, .card3, .card4, .card5 {
+        font-size: 14px; 
+        padding: 20px; 
+    }
+
+    img {
+        width: 50px; 
+        height: 80px;
+    }
+}
