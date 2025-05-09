@@ -20,6 +20,11 @@ div{
     padding: 20px;
     
 }
+.card1.quote{
+    background-image: url("./images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right 15%;
+}
 
 .card1 header div {
     position: relative; 
